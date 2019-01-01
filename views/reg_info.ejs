@@ -1,0 +1,35 @@
+<% include partials/header %>
+
+
+<div class="container">
+
+    <div class="content-title">
+        <h1>REGISTRATION RESULT</h1>
+    </div>
+
+	<div class="results">
+		<h3>The following information has been successfully registered:</h3>
+
+		<div class="reg-success">
+			<br>
+			<ul>
+				<li><h4>SYSTEM OWNER</h4>  <h5><%= result.login_user %><h5></li><br>
+				<li><h4>SYSTEM NAME</h4>  <h5><%= result.login_system %><h5></li><br>
+				<li><h4>SYSTEM USERNAME</h4>  <h5><%= result.login_username %><h5></li><br>
+				<li><h4>SYSTEM OWNER</h4>  <h5><%= result.login_pw %><h5></li>
+			</ul>	
+			<br>
+		</div>
+		<h3></h3>
+	</div>
+
+	<div class="back-home">
+		<a href="/">
+			<button type="submit" class="btn btn-primary btn-lg">BACK TO HOME</button>
+		</a>
+	</div>
+</div>
+
+
+
+<% include partials/footer %>

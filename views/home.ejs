@@ -1,0 +1,59 @@
+<% include partials/header %>
+
+
+<div class="container">
+    <div class="col-md-12">
+    	<div class="content-title">
+	    	<h1>MY PASSWORD MANAGER</h1>
+	       	<p>Finally, a way to manage and keep track of all my usernames and passwords...</p>
+    	</div>
+    </div>
+
+
+    <div class="row home-options">
+    	<div class="col-md-4">
+			<div class="content-form">
+				<form id="pw-retrieve-form" method="POST" action="/">
+					<label for="system_name">SELECT SYSTEM NAME</label><br>
+				
+					<select name="option_system_name">
+						<% for (var i=0; i<result.length; i++){ %>
+						 	<option value="<%= result[i].login_system%>"><%=result[i].login_system %></option>
+							 <!-- <option value="<%= result[i].login_system%>">OWNER: <%= result[i].login_user %> = <%=result[i].login_system %></option> -->
+						<%} %>
+					</select>
+					<br>
+
+					<button type="submit" class="btn btn-primary btn-lg" form="pw-retrieve-form">GET LOGIN INFO</button>
+				</form>
+			</div>
+    	</div>
+
+    	<div class="col-md-4">	
+			<div class="content-form">
+				<form id="search" method="POST" action="/search">
+					<label for="system_name">SEARCH SYSTEM</label><br>
+				
+					<input type="text" class="form-control" name="search_system" placeholder="Enter System Name">
+					<button type="submit" class="btn btn-primary btn-lg" form="search">SEARCH</button>
+				</form>
+			</div>	
+    	</div>
+
+    	<div class="col-md-4">
+			<div class="content-form">
+				<form id="retrieve-all" method="GET" action="/retrieve_all">
+					<label for="system_name">RETRIEVE ALL RECORDS</label><br>
+					<button type="submit" class="btn btn-primary btn-lg" form="retrieve-all">RETRIEVE ALL</button>
+				</form>
+			</div>
+    	</div>
+
+    </div>
+</div>
+
+
+<% include partials/footer %>
+
+
+

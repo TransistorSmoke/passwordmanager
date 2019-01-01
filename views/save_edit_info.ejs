@@ -1,0 +1,38 @@
+<% include partials/header %>
+
+
+<div class="container">
+
+    <div class="content-title">
+        <h1>EDIT LOGIN CREDENTIALS</h1>
+    </div>
+
+	<div class="results">
+            <h3>The following information has been successfully updated:</h3>
+    
+            <div class="reg-success">
+                <br>
+                <ul>
+                    <li><h5>SYSTEM NAME</h5>  <h2><%= result[2] %><h2></li>
+                    <li><h5>SYSTEM USERNAME</h5>  <h2><%= result[0] %><h2></li>
+                    <li><h5>SYSTEM PASSWORD</h5>  <h2><%= result[1] %><h2></li>
+                </ul>	
+                <br>
+            </div>
+            <h3></h3>
+        </div>
+</div>
+
+	<div class="back-home">
+		<a href="/">
+			<button type="submit" class="btn btn-primary btn-lg" form="retrieve-all">BACK TO HOME</button>
+		</a>
+	</div>
+
+
+
+
+
+
+
+<% include partials/footer %>

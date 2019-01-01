@@ -1,0 +1,50 @@
+<% include partials/header %>
+
+
+<div class="container">
+
+    <div class="content-title">
+        <h1>ADD NEW LOGIN INFO</h1>
+    </div>
+
+	<div class="add-info">
+        <form id="add_info" method="POST" action="/reg_info">
+        
+            <div class="form-group row justify-content-center add-info-width">
+                <div class="col-8">
+                <label for="system_owner">SYSTEM OWNER:</label>
+                <input type="text" class="form-control" name="system_owner" placeholder="Enter Login Owner">
+                </div><br>
+
+                <div class="col-8">
+                <label for="system_name">SYSTEM NAME:</label>
+                <input type="text" class="form-control" name="system_name" placeholder="Enter System Name">
+                </div><br>
+
+                <div class="col-8">
+                <label for="system_username">USERNAME:</label>
+                <input type="text" class="form-control" name="system_username" placeholder="Enter Username">   
+                </div><br>
+
+                <div class="col-8">       
+                <label for="system_password">PASSWORD:</label>
+                <input type="text" class="form-control" name="system_password" placeholder="Enter Password"> 
+                </div><br>
+                
+                     
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" form="add_info">ADD NEW INFO</button>        
+           
+        </div>
+        </form>
+	</div>
+
+	<div class="back-home">
+		<a href="/">BACK TO HOME</a>
+	</div>
+
+</div>
+
+<% include partials/footer %>
+

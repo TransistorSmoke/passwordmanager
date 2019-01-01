@@ -1,0 +1,51 @@
+<% include partials/header %>
+
+
+<div class="container">
+
+    <div class="content-title">
+        <h1>MY LOGIN CREDENTIALS</h1>
+    </div>
+
+	<div class="table-responsive">
+		<div class="retrieve-all">
+			<table class="table table-hover">
+				<tbody>
+					<tr>
+
+						<td>SYSTEM</td>
+						<td>USERNAME</td>
+						<td>PASSWORD</td>
+					</tr>
+
+
+					<% for(var i = 0; i < retrieveResult.length; i++){ %>
+					<tr>
+						<td class="first-child"><%= retrieveResult[i].login_system %></td>
+						<td><%= retrieveResult[i].login_username %></td>
+						<td><%= retrieveResult[i].login_pw %></td>
+					</tr>
+					<% } %> 
+				
+
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+</div>
+
+	<div class="back-home">
+		<a href="/">
+			<button type="submit" class="btn btn-primary btn-lg" form="retrieve-all">BACK TO HOME</button>
+		</a>
+	</div>
+
+
+
+
+
+
+
+<% include partials/footer %>
+

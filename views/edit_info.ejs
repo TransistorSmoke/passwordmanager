@@ -1,0 +1,56 @@
+<% include partials/header %>
+
+
+<div class="container">
+
+    <div class="content-title">
+        <h1>EDIT LOGIN CREDENTIALS</h1>
+    </div>
+
+    <div class="row home-options">
+            <div class="col">
+                <div class="content-form">
+                    <form id="pw-retrieve-form" method="POST" action="/edit_info">
+                        <div class="results">
+                                <% for(var x=0; x<result.length; x++){ %>
+                                <h3>SYSTEM NAME (<%=x+1 %>)</h3>
+                                <input type="text" class="form-control" name="system_name" placeholder="Enter Login Owner" value="<%= result[x].login_system  %>" readonly>
+                                                        
+                                <h3>USERNAME (<%=x+1 %>)</h3>
+                                <input type="text" class="form-control" name="system_username" placeholder="Enter Username" value="<%= result[x].login_username  %>">
+                                                                 
+                                <h3>PASSWORD (<%=x+1 %>)</h3>
+                                <input type="text" class="form-control" name="system_password" placeholder="Enter Username" value="<%= result[x].login_pw  %>">
+                                <% } %>
+                        </div>
+    
+
+                        
+                        <br><br>
+                    </form>
+
+
+
+                    <button type="submit" class="btn btn-primary btn-lg" form="pw-retrieve-form">UPDATE LOGIN INFO</button>
+                </div>
+            </div>
+        </div>  
+
+
+	</div>
+</div>
+
+	<div class="back-home">
+		<a href="/">
+			<button type="submit" class="btn btn-primary btn-lg" form="retrieve-all">BACK TO HOME</button>
+		</a>
+	</div>
+
+
+
+
+
+
+
+<% include partials/footer %>
+

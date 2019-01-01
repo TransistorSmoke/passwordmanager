@@ -1,0 +1,43 @@
+<% include partials/header %>
+
+
+<div class="container">
+
+    <div class="content-title">
+        <h1>EDIT LOGIN CREDENTIALS</h1>
+    </div>
+
+    <div class="row home-options">
+            <div class="col">
+                <div class="content-form">
+                    <form id="pw-retrieve-form" method="POST" action="/search_edit_info">
+                        <label for="system_name">SELECT SYSTEM NAME</label><br>
+                        <select name="option_system_name">
+                            <% for (var i=0; i<result.length; i++){ %>
+                                 <option value="<%= result[i].login_system%>"><%=result[i].login_system %></option>
+                            <%} %>
+                        </select>
+                        <br><br>
+                    </form>
+                    <button type="submit" class="btn btn-primary btn-lg" form="pw-retrieve-form">RETRIEVE LOGIN INFO</button>
+                </div>
+            </div>
+        </div>  
+
+
+	</div>
+</div>
+
+	<div class="back-home">
+		<a href="/">
+			<button type="submit" class="btn btn-primary btn-lg" form="retrieve-all">BACK TO HOME</button>
+		</a>
+	</div>
+
+
+
+
+
+
+
+<% include partials/footer %>

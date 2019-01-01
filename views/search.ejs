@@ -1,0 +1,40 @@
+<% include partials/header %>
+
+
+<div class="container">
+
+    <div class="content-title">
+        <h1>SEARCH RESULTS</h1>
+        <h2><%= (searchResult.length) %> System(s) found:</h2>
+    </div>
+
+	<div class="results">
+		<% for(var x=0; x<searchResult.length; x++){ %>
+		<h3>SYSTEM NAME (<%=x+1 %>)</h3>
+		<p class="results-system">
+			<strong><%= searchResult[x].login_system  %></strong>
+		</p>
+		
+
+		<h3>USERNAME (<%=x+1 %>)</h3>
+		<p>
+				<%= searchResult[x].login_username  %>
+		</p>
+
+		
+		<h3>PASSWORD (<%=x+1 %>)</h3>
+		<p>
+				<%= searchResult[x].login_pw  %>
+		</p><br><br>
+		<% } %>
+	</div>
+
+	<div class="back-home">
+		<a href="/">BACK TO HOME</a>
+	</div>
+
+</div>
+
+
+
+<% include partials/footer %>
