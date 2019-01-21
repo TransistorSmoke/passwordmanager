@@ -11,9 +11,9 @@ app.use('/css', express.static('css'));
 
 
 var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  database: 'login_db'
+  host: 'local',
+  user: 'myRoot',
+  database: 'test_db'
 });
 
 
